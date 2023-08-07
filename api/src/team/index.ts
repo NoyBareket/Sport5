@@ -1,20 +1,9 @@
 import express, { Request, Response, NextFunction } from "express";
-import { getAllTeams } from "./handlers/getAllTeams";
 import { getTeamByName } from "./handlers/getTeamByName";
 
-const teamsRouter = express.Router();
+const teamRouter = express.Router();
 
-teamsRouter.get("/", getTeams);
-teamsRouter.get("/:name", getTeam);
-
-async function getTeams(req: Request, res: Response, next: NextFunction) {
-  try {
-    const results = await getAllTeams();
-    res.json(results);
-  } catch (error) {
-    return next(error);
-  }
-}
+teamRouter.get("/", getTeam);
 
 async function getTeam(req: Request, res: Response, next: NextFunction) {
   try {
@@ -28,4 +17,4 @@ async function getTeam(req: Request, res: Response, next: NextFunction) {
   }
 }
 
-export { teamsRouter };
+export { teamRouter };
