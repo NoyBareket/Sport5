@@ -6,7 +6,7 @@ export interface ITeam {
   city: string;
   mainColor: string;
   secondaryColor: string;
-  semel: String;
+  semel: string;
 }
 
 async function getAllTeams(): Promise<Array<ITeam>> {

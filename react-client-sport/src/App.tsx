@@ -1,8 +1,8 @@
 import "./App.css";
 import { Routes, Route, Link, useNavigate } from "react-router-dom";
-import DynamicColumnsDemo from "./components/pages/teams/table";
+import TeamsTable from "./components/pages/teams/table";
 
- interface IRoute {
+interface IRoute {
   path: string;
   key: string;
   component: any;
@@ -12,7 +12,7 @@ import DynamicColumnsDemo from "./components/pages/teams/table";
 const routes: Array<IRoute> = [
   {
     path: "/teams",
-    component: <DynamicColumnsDemo />,
+    component: <TeamsPage />,
     key: "teams",
     label: "teams",
   },

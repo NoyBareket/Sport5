@@ -24,6 +24,6 @@ CREATE TABLE `sport5`.`teams` (
 
 
 
-INSERT INTO `sport5`.`teams` (`teamID`, `teamName`, `city`, `mainColor`, `secondaryColor`, `semel`) VALUES ('1', 'Macabi Tel Aviv', 'Tel Aviv', 'yellow', 'blue', 'dsavfsafdcawe32q');
-INSERT INTO `sport5`.`teams` (`teamID`, `teamName`, `city`, `mainColor`, `secondaryColor`, `semel`) VALUES ('2', 'Hapoel Tel Aviv', 'Tel Aviv', 'red', 'white', 'dsacavsfavafSwe32q');
-INSERT INTO `sport5`.`teams` (`teamID`, `teamName`, `city`, `mainColor`, `secondaryColor`, `semel`) VALUES ('3', 'Macabi Haifa', 'Haifa', 'green', 'white', 'dsacawfvbaetebfe32q');
+INSERT INTO `sport5`.`teams` (`teamID`, `teamName`, `city`, `mainColor`, `secondaryColor`, `semel`) VALUES ('1', 'Macabi Tel Aviv', 'Tel Aviv', 'yellow', 'blue', 'https://seeklogo.com/images/M/maccabi-tel-aviv-logo-33E39295AB-seeklogo.com.png');
+-- INSERT INTO `sport5`.`teams` (`teamID`, `teamName`, `city`, `mainColor`, `secondaryColor`, `semel`) VALUES ('2', 'Hapoel Tel Aviv', 'Tel Aviv', 'red', 'white', 'dsacavsfavafSwe32q');
+-- INSERT INTO `sport5`.`teams` (`teamID`, `teamName`, `city`, `mainColor`, `secondaryColor`, `semel`) VALUES ('3', 'Macabi Haifa', 'Haifa', 'green', 'white', 'dsacawfvbaetebfe32q');
