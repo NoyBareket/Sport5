@@ -12,14 +12,14 @@ CREATE TABLE `sport5`.`teams` (
   PRIMARY KEY (`teamID`));
 
 
-  -- CREATE TABLE `sport5`.`games` (
-  -- `gameID` INT NOT NULL,
-  -- `team_A_ID` INT NOT NULL,
-  -- `team_B_ID` INT NOT NULL,
-  -- `team_A_Score` VARCHAR(45) NULL,
-  -- `team_B_Score` VARCHAR(45) NULL,
-  -- `gameTime` VARCHAR(45) NULL,
-  -- PRIMARY KEY (`gameID`));
+  CREATE TABLE `sport5`.`games` (
+  `gameID` INT NOT NULL,
+  `team_A_ID` INT NOT NULL,
+  `team_B_ID` INT NOT NULL,
+  `team_A_Score` VARCHAR(45) NULL,
+  `team_B_Score` VARCHAR(45) NULL,
+  `gameTime` VARCHAR(45) NULL,
+  PRIMARY KEY (`gameID`));
   
 
 
