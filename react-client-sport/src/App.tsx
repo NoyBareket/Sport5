@@ -54,18 +54,20 @@ function App() {
   // }
 
   return (
-    <div style={{ marginTop: "50px" }}>
-      {routes
+    <div style={{ display: "flax", marginTop: "50px", padding: "20px" }}>
+      <div style={{ width: "800px" }}>
+        {routes
+          .filter((r) => r.label)
+          .map((route: IRoute) => {
+            return (
+              <Link key={route.label} to={route.path}>
+                {" "}
+                {route.label}{" "}
+              </Link>
+            );
+          })}
+      </div>
 
-        .filter((r) => r.label)
-        .map((route: IRoute) => {
-          return (
-            <Link key={route.label} to={route.path}>
-              {" "}
-              {route.label}{" "}
-            </Link>
-          );
-        })}
       <Routes>
         {routes.map((route: IRoute) => {
           return (

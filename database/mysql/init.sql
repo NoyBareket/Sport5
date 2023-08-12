@@ -73,6 +73,8 @@ CREATE TABLE `teams` (
 LOCK TABLES `teams` WRITE;
 /*!40000 ALTER TABLE `teams` DISABLE KEYS */;
 INSERT INTO `teams` VALUES (1,'Macabi Tel Aviv','Tel Aviv','yellow','blue','https://seeklogo.com/images/M/maccabi-tel-aviv-logo-33E39295AB-seeklogo.com.png');
+INSERT INTO `teams` VALUES (2,'Hapoel Tel Aviv','Tel Aviv','red','white','https://upload.wikimedia.org/wikipedia/de/thumb/6/64/Hapoel_Tel_Aviv.svg/1200px-Hapoel_Tel_Aviv.svg.png');
+INSERT INTO `teams` VALUES (3,'Macabi Haifa','Haifa','green','white','https://img.uefa.com/imgml/TP/teams/logos/240x240/59045.png');
 /*!40000 ALTER TABLE `teams` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
