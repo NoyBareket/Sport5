@@ -1,11 +1,16 @@
-// const express = require("express")
 import express, { Request, Response, NextFunction } from "express";
-import { teamsRouter } from "./teams";
+import dotenv from "dotenv";
 import cors from "cors";
-
+import { teamsRouter } from "./teams";
+dotenv.config();
 const port = 5001;
 const app = express();
+app.use(express.json());
 app.use(cors());
+app.get("/health-check", function (req, res, next) {
+  res.send(`API PORT ${port} IS OK ${new Date().toISOString()}`);
+});
+
 app.use("/teams", teamsRouter);
 
 app.listen(port, () => {

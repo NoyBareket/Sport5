@@ -1,0 +1,4 @@
+FROM node:20-alpine3.17
+COPY index.js .
+# THIS LINE IS NOT PART OF THE BUILD BUT THE RUN CONTAINER FLOW
+CMD ["node", "index.js"] 
