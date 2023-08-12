@@ -5,6 +5,8 @@ import "primeicons/primeicons.css";
 import TeamPage from "./components/pages/teams";
 import NotFound from "./components/pages/not-found";
 import AddNewTeamPage from "./components/pages/addTeam";
+import GamesPage from "./components/pages/games";
+import AddNewGamePage from "./components/pages/addGame";
 
 console.log("test");
 interface IRoute {
@@ -25,6 +27,18 @@ const routes: Array<IRoute> = [
     component: <AddNewTeamPage />,
     label: "Add Team",
     key: "AddTeamPage",
+  },
+  {
+    path: "/games",
+    component: <GamesPage />,
+    key: "Games",
+    label: "Games",
+  },
+  {
+    path: "/add-Game",
+    component: <AddNewGamePage />,
+    label: "Add Game",
+    key: "AddGamePage",
   },
   {
     path: "*",

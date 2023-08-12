@@ -1,15 +1,15 @@
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
-import { ITeam } from "../api";
+import { IGame } from "../api";
 
-export default function TeamsTable(props: { teams: Array<ITeam> }) {
-  if (!props.teams[0]) return null;
+export default function GamesTable(props: { games: Array<IGame> }) {
+  if (!props.games[0]) return null;
 
   return (
     <div>
       <div className="card">
-        <DataTable value={props.teams} tableStyle={{ minWidth: "50rem" }}>
-          {Object.keys(props.teams[0]).map((key) => {
+        <DataTable value={props.games} tableStyle={{ minWidth: "50rem" }}>
+          {Object.keys(props.games[0]).map((key) => {
             if (key === "semel") {
               return (
                 <Column
@@ -21,7 +21,7 @@ export default function TeamsTable(props: { teams: Array<ITeam> }) {
                       width={"50px"}
                       height={"50px"}
                       src={rowData[key]}
-                      alt="Team Image"
+                      alt="Game Image"
                     />
                   )}
                 />

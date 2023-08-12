@@ -27,15 +27,15 @@ DROP TABLE IF EXISTS `games`;
 CREATE TABLE `games` (
   `gamesID` int NOT NULL AUTO_INCREMENT,
   `teamA_ID` int NOT NULL,
-  `teamb_ID` int NOT NULL,
+  `teamB_ID` int NOT NULL,
   `teamA_Score` int DEFAULT NULL,
   `teamB_Score` int DEFAULT NULL,
   `gameTime` date DEFAULT NULL,
   PRIMARY KEY (`gamesID`),
   KEY `teamA_ID_idx` (`teamA_ID`),
-  KEY `teamB_ID_idx` (`teamb_ID`),
+  KEY `teamB_ID_idx` (`teamB_ID`),
   CONSTRAINT `teamA_ID` FOREIGN KEY (`teamA_ID`) REFERENCES `teams` (`teamID`),
-  CONSTRAINT `teamB_ID` FOREIGN KEY (`teamb_ID`) REFERENCES `teams` (`teamID`)
+  CONSTRAINT `teamB_ID` FOREIGN KEY (`teamB_ID`) REFERENCES `teams` (`teamID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
