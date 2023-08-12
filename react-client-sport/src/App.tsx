@@ -1,10 +1,9 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
-import NotFound from "./components/pages/not-found";
 import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";
-import CarsPage from "./components/pages/cars";
-import AddNewCarPage from "./components/pages/addNewCar";
+import TeamPage from "./components/pages/teams";
+import NotFound from "./components/pages/not-found";
 
 console.log("test");
 interface IRoute {
@@ -16,16 +15,16 @@ interface IRoute {
 const routes: Array<IRoute> = [
   {
     path: "/teams",
-    component: <CarsPage />,
+    component: <TeamPage />,
     key: "Teams",
     label: "Teams",
   },
-  {
-    path: "/add-Team",
-    component: <AddNewCarPage />,
-    label: "Add Team",
-    key: "AddTeamPage",
-  },
+  // {
+  //   path: "/add-Team",
+  //   component: <AddNewCarPage />,
+  //   label: "Add Team",
+  //   key: "AddTeamPage",
+  // },
   {
     path: "*",
     component: <NotFound />,
