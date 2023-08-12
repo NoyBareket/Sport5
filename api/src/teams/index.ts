@@ -1,11 +1,10 @@
 import express, { Request, Response, NextFunction } from "express";
 import { getAllTeams } from "./handlers/getAllTeams";
-import { getTeamByName } from "./handlers/getTeamByName";
+import { addNewTeam } from "./handlers/addNewTeam";
 
 const teamsRouter = express.Router();
 
 teamsRouter.get("/", getTeams);
-teamsRouter.get("/:name", getTeam);
 
 async function getTeams(req: Request, res: Response, next: NextFunction) {
   try {
@@ -16,16 +15,16 @@ async function getTeams(req: Request, res: Response, next: NextFunction) {
   }
 }
 
-async function getTeam(req: Request, res: Response, next: NextFunction) {
+teamsRouter.post("/new", async function (req, res, next) {
   try {
-    const teamName = req.params.id;
-    const teamNameString = String(teamName);
-    if (!teamNameString) throw new Error("Id is not a valid Name");
-    const result = await getTeamByName(teamNameString);
-    res.json(result);
+    console.log(req.body);
+
+    const result = await addNewTeam(req.body);
+    return res.json(result);
   } catch (error) {
+    console.log(error);
     return next(error);
   }
-}
+});
 
 export { teamsRouter };

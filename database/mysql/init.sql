@@ -58,12 +58,12 @@ DROP TABLE IF EXISTS `teams`;
 CREATE TABLE `teams` (
   `teamID` int NOT NULL AUTO_INCREMENT,
   `teamName` varchar(45) NOT NULL,
-  `city` varchar(45) DEFAULT NULL,
+  `city` varchar(45) NOT NULL,
   `mainColor` varchar(45) DEFAULT NULL,
   `secondaryColor` varchar(45) DEFAULT NULL,
-  `semel` varchar(200) DEFAULT NULL,
+  `semel` varchar(900) DEFAULT NULL,
   PRIMARY KEY (`teamID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,4 +85,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-12 20:39:31
+-- Dump completed on 2023-08-12 23:28:55

@@ -4,6 +4,7 @@ import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";
 import TeamPage from "./components/pages/teams";
 import NotFound from "./components/pages/not-found";
+import AddNewTeamPage from "./components/pages/addTeam";
 
 console.log("test");
 interface IRoute {
@@ -19,12 +20,12 @@ const routes: Array<IRoute> = [
     key: "Teams",
     label: "Teams",
   },
-  // {
-  //   path: "/add-Team",
-  //   component: <AddNewCarPage />,
-  //   label: "Add Team",
-  //   key: "AddTeamPage",
-  // },
+  {
+    path: "/add-Team",
+    component: <AddNewTeamPage />,
+    label: "Add Team",
+    key: "AddTeamPage",
+  },
   {
     path: "*",
     component: <NotFound />,
