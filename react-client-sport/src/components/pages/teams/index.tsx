@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { ITeam, getTeamsService } from "./api";
+import { ITeam, getTeamsService, searchTeamsService } from "./api";
 import TeamsTable from "./table";
+import SearchTeams from "./search";
 
 export default function TeamPage() {
   const [teams, setTeams] = useState<Array<ITeam>>([]);
@@ -8,6 +9,14 @@ export default function TeamPage() {
   async function getTeams() {
     try {
       const result = await getTeamsService();
+      setTeams(result);
+    } catch (error) {
+      alert("error");
+    }
+  }
+  async function handleSearchApi(searchText: string) {
+    try {
+      const result = await searchTeamsService(searchText);
       setTeams(result);
     } catch (error) {
       alert("error");
@@ -21,6 +30,7 @@ export default function TeamPage() {
   }, []);
   return (
     <div>
+      <SearchTeams searchAction={handleSearchApi} allAction={getTeamsService} />
       <h1>Teams</h1> <TeamsTable key={"TeamsTable"} teams={teams} />
     </div>
   );
